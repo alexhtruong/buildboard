@@ -1,0 +1,77 @@
+name: buildboard-ci
+
+on: [push, pull_request]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:13
+        env:
+          POSTGRES_USER: test
+          POSTGRES_PASSWORD: test
+          POSTGRES_DB: testdb
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      DATABASE_URL: postgres://test:test@localhost:5432/testdb
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Frontend
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install frontend deps
+        working-directory: ./frontend
+        run: npm install
+
+      - name: Lint frontend
+        working-directory: ./frontend
+        run: npm run lint
+
+      - name: Type check frontend
+        working-directory: ./frontend
+        run: npm run type-check
+
+      # Backend
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install UV
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Install backend deps
+        working-directory: ./server
+        run: uv sync
+
+      - name: Set up backend environment
+        working-directory: ./server
+        run: |
+          echo "API_KEY=test_api_key" >> .env
+          echo "POSTGRES_URI=postgresql://test:test@localhost:5432/testdb" >> .env
+
+      - name: Run backend tests
+        working-directory: ./server
+        run: uv run pytest
+
+      - name: Type check backend (optional)
+        working-directory: ./server
+        run: uv run mypy .
+      
+      - name: Lint backend
+        working-directory: ./server
+        run: |
+          uv run ruff check .
+          uv run ruff format --check .
