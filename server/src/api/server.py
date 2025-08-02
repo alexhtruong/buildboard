@@ -33,10 +33,7 @@ app = FastAPI(
 )
 
 # TODO: add prod links
-origins = [
-    "http://localhost",
-    "http://localhost:8000"    
-]
+origins = ["http://localhost", "http://localhost:8000"]
 
 app.add_middleware(
     CORSMiddleware,
