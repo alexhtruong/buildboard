@@ -1,20 +1,22 @@
-# BuildBoard
+# 🔧 BuildBoard – Build in Public, but Structured
 
-BuildBoard is a full-stack web platform for developers, learners, and tinkerers to publicly (or privately) document their progress, architecture decisions, mistakes, technical struggles, and lessons while working on any project.
+BuildBoard is a full-stack platform where developers, engineers, and learners document their project journeys — not just the end results. It's designed to capture and organize the real work behind building something: the progress logs, tough decisions, mistakes made, and the lessons learned.
 
-Think of it as:
-- **A journal + changelog + dev blog + build-in-public platform**
-- **Designed to showcase the thinking, process, and technical nuance of real projects — not just the polished result**
+Instead of tweeting sporadic updates or losing technical context in Notion docs or GitHub issues, BuildBoard gives users a structured way to share the evolution of any project — turning messy development into meaningful narrative.
 
-## 🚀 What is BuildBoard?
+## 🚀 Core Features
 
-BuildBoard bridges the gap between private development notes and public showcasing. It's a platform where developers can:
+- **Project Timelines**: Each project becomes a public or private timeline of logs, tagged as progress, mistake, decision, or lesson
+- **Smart Search**: Logs are searchable across projects, filterable by stack, and enriched with AI summaries to surface key learnings
+- **Developer Integration**: GitHub commits, tool tags, and community engagement features make BuildBoard feel like a dev blog crossed with a structured, searchable digital lab notebook
 
-- Document their thought process and decision-making in real-time
-- Share technical struggles and how they overcame them
-- Create a transparent timeline of project evolution
-- Build a portfolio that shows the journey, not just the destination
-- Learn from others' documented experiences and mistakes
+## 🎯 Who It's For
+
+BuildBoard is designed to support:
+
+- 💡 **Developers learning in public**
+- 🧠 **Teams reflecting on technical decisions**
+- 🧰 **Builders creating a living portfolio that shows how they think, not just what they built**
 
 ## 🛠️ Tech Stack
 
@@ -100,40 +102,61 @@ The frontend will be available at `http://localhost:3000`
 
 ## 🌟 Features
 
-### Core Features
-- [ ] **Project Timeline** - Chronological documentation of project progress
-- [ ] **Decision Logs** - Record and explain architectural and technical decisions
-- [ ] **Struggle Stories** - Document challenges, bugs, and how they were resolved
-- [ ] **Code Evolution** - Track how code and architecture evolve over time
-- [ ] **Learning Notes** - Capture insights and lessons learned during development
+### Core Platform
+- [ ] **Structured Project Logs** - Document progress, decisions, mistakes, and lessons with dedicated entry types
+- [ ] **Timeline View** - Chronological visualization of project evolution
+- [ ] **Smart Tagging** - Organize entries by technology stack, project phase, or custom tags
+- [ ] **AI-Powered Summaries** - Surface key learnings and patterns across projects
+- [ ] **Public/Private Projects** - Choose visibility for each project and individual entries
 
-### Platform Features
-- [ ] **Public/Private Projects** - Choose visibility for each project
-- [ ] **Rich Text Editor** - Markdown support with code highlighting
-- [ ] **Tagging System** - Organize entries by technology, topic, or phase
-- [ ] **Search & Discovery** - Find projects and entries by technology or topic
-- [ ] **Developer Profiles** - Showcase your development journey
+### Developer Experience
+- [ ] **GitHub Integration** - Connect commits and code changes to project logs
+- [ ] **Rich Text Editor** - Markdown support with code syntax highlighting
+- [ ] **Search & Discovery** - Find projects and insights across the platform
+- [ ] **Tool Integration** - Tag entries with development tools and frameworks
+- [ ] **Export Options** - Generate reports and portfolios from your project data
+
+### Community Features
+- [ ] **Developer Profiles** - Showcase your learning journey and technical evolution
+- [ ] **Knowledge Graph** - Connect related mistakes, decisions, and learnings
+- [ ] **Engagement System** - Comment, bookmark, and learn from others' experiences
 
 ## 🗺️ Roadmap
 
-- [ ] MVP: Basic project creation and entry logging
+### Phase 1: MVP
+- [ ] Project creation and structured log entry system
+- [ ] Timeline visualization with entry type indicators
+- [ ] Basic search and filtering
 - [ ] User authentication and profiles
-- [ ] Rich text editor with code support
+
+### Phase 2: Intelligence
+- [ ] AI-powered summaries and insights
+- [ ] GitHub integration for commit tracking
+- [ ] Advanced search with cross-project patterns
+- [ ] Rich text editor with enhanced code support
+
+### Phase 3: Community
 - [ ] Public project discovery
+- [ ] Knowledge graph connections
+- [ ] Community engagement features
+- [ ] Team collaboration tools
+
+### Phase 4: Scale
 - [ ] Mobile-responsive design
 - [ ] API for third-party integrations
-- [ ] Advanced analytics and insights
-- [ ] Team collaboration features
+- [ ] Advanced analytics and reporting
+- [ ] Enterprise team features
 
-## 💡 Why BuildBoard?
+## � Why BuildBoard Matters
 
-Most developer portfolios show the final product, but the real learning happens in the messy middle. BuildBoard celebrates the process:
+Most dev portfolios are snapshots of the finish line. BuildBoard shows the path. It reflects how people build, debug, and evolve — turning "mistakes" into a knowledge graph, and "logs" into career capital.
 
-- **Transparency** - Show your real development process, including failures
-- **Learning** - Learn from others' documented journeys and mistakes
-- **Growth** - Track your own evolution as a developer
-- **Community** - Connect with others facing similar challenges
+**BuildBoard transforms:**
+- **Scattered updates** → **Structured narratives**
+- **Lost context** → **Searchable knowledge**
+- **Individual mistakes** → **Collective learning**
+- **Static portfolios** → **Living documentation of growth**
 
 ---
 
-**BuildBoard** - Because the journey is just as important as the destination. 🚀
+**BuildBoard** – Because the path matters as much as the destination. Turn your development journey into career capital. 🚀
