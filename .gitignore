@@ -46,3 +46,5 @@ logs/
 
 # Dependencies
 node_modules/
+.mypy_cache/
+.ruff_cache/
