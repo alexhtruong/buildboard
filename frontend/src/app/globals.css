@@ -58,58 +58,39 @@
   }
 }
 
-/* Custom scrollbar for dark theme */
+/* Adaptive scrollbar for both themes */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(15 23 42);
+  @apply bg-muted;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(51 65 85);
+  @apply bg-border hover:bg-muted-foreground/50;
   border-radius: 3px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(71 85 105);
-}
-
-/* Code block styling */
+/* Code block styling that adapts to theme */
 .prose code {
-  @apply bg-slate-800 text-slate-300 px-2 py-1 rounded text-sm font-mono border border-slate-700;
+  @apply bg-muted text-foreground px-2 py-1 rounded text-sm font-mono border;
 }
 
 .prose pre {
-  @apply bg-slate-800 p-4 rounded-lg overflow-x-auto border border-slate-700;
+  @apply bg-muted p-4 rounded-lg overflow-x-auto border;
 }
 
 .prose pre code {
   @apply bg-transparent p-0 border-0;
 }
 
-/* Timeline connector styling */
-.timeline-connector {
-  background: linear-gradient(to bottom, transparent 0%, rgb(30 41 59) 20%, rgb(30 41 59) 80%, transparent 100%);
-}
-
 /* Improved focus states */
 .focus-visible\:ring-2:focus-visible {
-  @apply ring-blue-500/50;
+  @apply ring-primary/50;
 }
 
-/* Custom badge animations */
-@keyframes badge-pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.8;
-  }
-}
-
-.badge-animate {
-  animation: badge-pulse 2s ease-in-out infinite;
+/* Timeline connector that adapts to theme */
+.timeline-connector {
+  @apply bg-border;
 }

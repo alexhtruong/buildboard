@@ -1,10 +1,26 @@
-"use client"
+"use client";
 
-import { ArrowRight, BookOpen, Code2, GitBranch, MessageSquare, Users, Zap, Github, Twitter } from "lucide-react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import {
+  ArrowRight,
+  BookOpen,
+  Code2,
+  GitBranch,
+  MessageSquare,
+  Users,
+  Zap,
+  Github,
+  Twitter,
+} from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function LandingPage() {
   return (
@@ -19,17 +35,27 @@ export default function LandingPage() {
             <span className="text-xl font-bold">BuildBoard</span>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
-            <Link href="#features" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#features"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
               Features
             </Link>
-            <Link href="#how-it-works" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#how-it-works"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
               How it Works
             </Link>
-            <Link href="#pricing" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#pricing"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
               Pricing
             </Link>
           </nav>
           <div className="flex items-center space-x-4">
+            <ThemeToggle />
             <Button variant="ghost" size="sm">
               Sign In
             </Button>
@@ -50,18 +76,24 @@ export default function LandingPage() {
               Document Your Developer Journey
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              Your Development Journey, <span className="text-primary">Documented</span>
+              Your Development Journey,{" "}
+              <span className="text-primary">Documented</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              BuildBoard combines journaling, changelogs, dev blogging, and build-in-public into one powerful platform.
-              Track your progress, share your struggles, and celebrate your wins.
+              BuildBoard combines journaling, changelogs, dev blogging, and
+              build-in-public into one powerful platform. Track your progress,
+              share your struggles, and celebrate your wins.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8">
                 Start Your Journey
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-lg px-8 bg-transparent"
+              >
                 <Github className="mr-2 h-5 w-5" />
                 View Demo
               </Button>
@@ -74,10 +106,12 @@ export default function LandingPage() {
       <section id="features" className="py-20 bg-muted/50">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Everything You Need to Document Your Journey</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Everything You Need to Document Your Journey
+            </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Four powerful tools in one platform, designed specifically for developers who want to share their building
-              process.
+              Four powerful tools in one platform, designed specifically for
+              developers who want to share their building process.
             </p>
           </div>
 
@@ -87,7 +121,8 @@ export default function LandingPage() {
                 <BookOpen className="h-10 w-10 text-primary mb-2" />
                 <CardTitle>Developer Journal</CardTitle>
                 <CardDescription>
-                  Daily reflections, technical thoughts, and personal insights about your development process.
+                  Daily reflections, technical thoughts, and personal insights
+                  about your development process.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -97,7 +132,8 @@ export default function LandingPage() {
                 <GitBranch className="h-10 w-10 text-amber-500 mb-2" />
                 <CardTitle>Smart Changelog</CardTitle>
                 <CardDescription>
-                  Automatically track and beautifully present your project milestones and feature releases.
+                  Automatically track and beautifully present your project
+                  milestones and feature releases.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -107,7 +143,8 @@ export default function LandingPage() {
                 <MessageSquare className="h-10 w-10 text-primary mb-2" />
                 <CardTitle>Dev Blog</CardTitle>
                 <CardDescription>
-                  Share technical tutorials, architecture decisions, and lessons learned with the community.
+                  Share technical tutorials, architecture decisions, and lessons
+                  learned with the community.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -117,7 +154,8 @@ export default function LandingPage() {
                 <Users className="h-10 w-10 text-amber-500 mb-2" />
                 <CardTitle>Build in Public</CardTitle>
                 <CardDescription>
-                  Transparent progress sharing, community feedback, and authentic development storytelling.
+                  Transparent progress sharing, community feedback, and
+                  authentic development storytelling.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -129,7 +167,9 @@ export default function LandingPage() {
       <section id="how-it-works" className="py-20">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Simple Process, Powerful Results</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Simple Process, Powerful Results
+            </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Start documenting your journey in minutes, not hours.
             </p>
@@ -142,7 +182,8 @@ export default function LandingPage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Create Your Board</h3>
               <p className="text-muted-foreground">
-                Set up your project board with custom categories, tags, and milestones that match your workflow.
+                Set up your project board with custom categories, tags, and
+                milestones that match your workflow.
               </p>
             </div>
 
@@ -152,7 +193,8 @@ export default function LandingPage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Document & Share</h3>
               <p className="text-muted-foreground">
-                Write entries, upload code snippets, track progress, and share updates with your audience.
+                Write entries, upload code snippets, track progress, and share
+                updates with your audience.
               </p>
             </div>
 
@@ -162,7 +204,8 @@ export default function LandingPage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Build Community</h3>
               <p className="text-muted-foreground">
-                Connect with other developers, get feedback, and grow your audience through authentic sharing.
+                Connect with other developers, get feedback, and grow your
+                audience through authentic sharing.
               </p>
             </div>
           </div>
@@ -173,7 +216,9 @@ export default function LandingPage() {
       <section className="py-20 bg-muted/50">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Trusted by Developers Worldwide</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Trusted by Developers Worldwide
+            </h2>
             <p className="text-xl text-muted-foreground">
               Join thousands of developers already documenting their journey
             </p>
@@ -200,9 +245,12 @@ export default function LandingPage() {
       <section className="py-20">
         <div className="container">
           <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-12 text-center text-primary-foreground">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Journey?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Ready to Start Your Journey?
+            </h2>
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-              Join the community of developers who are building in public and documenting their path to success.
+              Join the community of developers who are building in public and
+              documenting their path to success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" className="text-lg px-8">
@@ -233,7 +281,8 @@ export default function LandingPage() {
                 <span className="text-xl font-bold">BuildBoard</span>
               </div>
               <p className="text-muted-foreground mb-4">
-                Document your developer journey and build in public with the community.
+                Document your developer journey and build in public with the
+                community.
               </p>
               <div className="flex space-x-4">
                 <Button variant="ghost" size="icon">
@@ -249,22 +298,34 @@ export default function LandingPage() {
               <h3 className="font-semibold mb-4">Product</h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Features
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Pricing
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Changelog
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Roadmap
                   </Link>
                 </li>
@@ -275,22 +336,34 @@ export default function LandingPage() {
               <h3 className="font-semibold mb-4">Resources</h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Documentation
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     API Reference
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Community
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Blog
                   </Link>
                 </li>
@@ -301,22 +374,34 @@ export default function LandingPage() {
               <h3 className="font-semibold mb-4">Company</h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Privacy
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Terms
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Contact
                   </Link>
                 </li>
@@ -330,5 +415,5 @@ export default function LandingPage() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
