@@ -1,5 +1,3 @@
-"use client";
-
 import {
   ArrowRight,
   BookOpen,
@@ -21,8 +19,10 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ThemeToggle } from "@/components/theme-toggle";
+import AuthButtons from "@/components/auth-buttons";
 
-export default function LandingPage() {
+export default async function LandingPage() {
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -56,13 +56,7 @@ export default function LandingPage() {
           </nav>
           <div className="flex items-center space-x-4">
             <ThemeToggle />
-            <Button variant="ghost" size="sm">
-              Sign In
-            </Button>
-            <Button size="sm">
-              Get Started
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <AuthButtons />
           </div>
         </div>
       </header>
